@@ -7,36 +7,46 @@ import Ecommerce from "../../img/Flipkart.png";
 import HOC from "../../img/Food.png";
 import MusicApp from "../../img/Spotify.png";
 import { themeContext } from "../../Context";
+import { staggerContainer, zoomIn } from "../../utils/motion";
+import { motion } from "framer-motion";
+
 const Portfolio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+  const mobile = window.innerWidth <= 480 ? true : false;
+
   return (
-    <div className="portfolio" id="portfolio">
+    <motion.div className="portfolio" id="portfolio"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}>
       {/* heading */}
-      <span style={{color: darkMode?'white': ''}}>Recent Projects</span>
+      <span style={{ color: darkMode ? 'white' : '' }}>Recent Projects</span>
       <span>Portfolio</span>
 
       {/* slider */}
       <Swiper
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={mobile ? 1 : 3}
         grabCursor={true}
         className="portfolio-slider"
       >
         <SwiperSlide>
-          <img src={Sidebar} alt="" />
+          <motion.img variants={zoomIn(0.1, 1)} src={MusicApp} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Ecommerce} alt="" />
+          <motion.img variants={zoomIn(0.1, 1)} src={Sidebar} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={MusicApp} alt="" />
+          <motion.img variants={zoomIn(0.1, 1)} src={Ecommerce} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={HOC} alt="" />
+          <motion.img variants={zoomIn(0.1, 1)} src={HOC} alt="" />
         </SwiperSlide>
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 

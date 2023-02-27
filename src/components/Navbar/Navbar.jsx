@@ -2,9 +2,20 @@ import React from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-const navbar = () => {
+import { motion } from "framer-motion";
+import { headerVariants } from "../../utils/motion";
+
+
+const Navbar = () => {
+
   return (
-    <div className="n-wrapper" id="Navbar">
+    <motion.div className="n-wrapper" id="Navbar"
+      variants={headerVariants}
+      initial="hidden"
+      whileInView="show"
+      // className={`bg-primary paddings ${css.wrapper}`}
+      viewport={{ once: true, amount: 0.25 }}
+    >
       {/* left */}
       <div className="n-left">
         <div className="n-name">Ashvin</div>
@@ -20,33 +31,38 @@ const navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="services" spy={true} smooth={true}>
-                Serivces
+              <Link to="skiils" spy={true} smooth={true}>
+                Skills
               </Link>
             </li>
             <li>
-              <Link to="experience" spy={true} smooth={true}>
-                Experience
+              <Link to="education" spy={true} smooth={true}>
+                Education
+              </Link>
+            </li>
+            <li>
+              <Link to="languages" spy={true} smooth={true}>
+                Languages
               </Link>
             </li>
             <li>
               <Link to="portfolio" spy={true} smooth={true}>
-                Projects
+                Portfolio
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="testimonial" spy={true} smooth={true}>
                 Testimonial
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <Link to="contact" spy={true} smooth={true}>
-        <button className="button n-button">Contact</button>
+          <button className="button n-button">Contact</button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default navbar;
+export default Navbar;

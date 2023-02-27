@@ -11,6 +11,8 @@ import profilePic3 from "../../img/profile3.jpg";
 import profilePic4 from "../../img/profile4.jpg";
 import { useContext } from "react";
 import { themeContext } from "../../Context";
+import { fadeIn, footerVariants, staggerContainer } from "../../utils/motion";
+import { motion } from "framer-motion";
 
 const Testimonial = () => {
   const theme = useContext(themeContext);
@@ -39,15 +41,20 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="t-wrapper" id="testimonial">
-      <div className="t-heading">
+    <motion.div className="t-wrapper" id="testimonial"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}>
+      <motion.div className="t-heading"
+        variants={fadeIn("right", "tween", 1, 1)}>
         <span>Clients always get </span>
         <span>Exceptional Work </span>
         <span>from me...</span>
         <div className="blur t-blur1" style={{ background: "var(--purple)" }}></div>
         <div className="blur t-blur2" style={{ background: "skyblue" }}></div>
 
-      </div>
+      </motion.div>
       <Swiper
         // install Swiper modules
         modules={[Pagination]}
@@ -57,15 +64,15 @@ const Testimonial = () => {
         {clients.map((client, index) => {
           return (
             <SwiperSlide key={index}>
-              <div style={{ background: darkMode ? "rgb(42 52 60)" : "", color: darkMode ? "white" : "" }} className="testimonial">
+              <motion.div  variants={footerVariants} style={{ background: darkMode ? "rgb(42 52 60)" : "", color: darkMode ? "white" : "" }} className="testimonial">
                 <img src={client.img} alt="" />
                 <span style={{ color: darkMode ? "white" : "" }}>{client.review}</span>
-              </div>
+              </motion.div>
             </SwiperSlide>
           );
         })}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 

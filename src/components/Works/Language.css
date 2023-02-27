@@ -1,4 +1,4 @@
-.works {
+.lang {
   padding: 0 3rem 0 3rem;
   display: flex;
   height: 90vh;
@@ -100,8 +100,21 @@
   background: white;
 }
 
-.w-secCircle>img {
-  transform: scale(0.6);
+.w-mainCircle> :nth-child(5) img {
+  transform: scale(0.08);
+}
+.w-mainCircle> :nth-child(4) img {
+  transform: scale(0.25);
+  /* border-radius: 10%; */
+}
+.w-mainCircle> :nth-child(3) img {
+  transform: scale(0.45);
+}
+.w-mainCircle> :nth-child(2) img {
+  transform: scale(0.13);
+}
+.w-mainCircle> :nth-child(1) img {
+  transform: scale(0.06);
 }
 
 .w-backCircle {
@@ -126,7 +139,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .works {
+  .lang {
     flex-direction: column;
     height: 55rem;
     padding: 0;
@@ -136,7 +149,7 @@
   .w-right {
     display: flex;
     align-items: flex-start;
-    justify-content: start;
+    justify-content: flex-start;
     transform: scale(0.7);
   }
 

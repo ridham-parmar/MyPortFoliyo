@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Services.css";
+import "./Skiil.css";
 import Card from "../Card/Card";
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
@@ -7,6 +7,7 @@ import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import Resume from './resume.pdf';
+import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 
 const Services = () => {
   // context
@@ -20,12 +21,19 @@ const Services = () => {
   };
 
   return (
-    <div className="services" id="services">
+    <motion.div className="skiils" id="skiils"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
       {/* left side */}
-      <div className="awesome">
+      <motion.div className="awesome"
+        variants={fadeIn("right", "tween", 0.2, 1)}
+      >
         {/* dark mode */}
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
-        <span>services</span>
+        <span>Skills</span>
         <span>
           My Js and React knowledge is good and I create Website using React Library
           <br />
@@ -35,7 +43,7 @@ const Services = () => {
           <button className="button s-button">Download CV</button>
         </a>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
-      </div>
+      </motion.div>
       {/* right */}
       <div className="cards">
         {/* first card */}
@@ -71,8 +79,9 @@ const Services = () => {
         >
           <Card
             emoji={Humble}
-            heading={"Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            heading={"Other"}
+            // detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            detail={"GitHub command, Data Structure, SQL CRUD Query, OOPs Concept"}
             color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>
@@ -81,7 +90,7 @@ const Services = () => {
           style={{ background: "var(--purple)" }}
         ></div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

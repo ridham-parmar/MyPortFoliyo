@@ -13,6 +13,8 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { fadeIn, slideIn, staggerContainer, zoomIn } from "../../utils/motion"
+
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -22,31 +24,42 @@ const Intro = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-    <div className="Intro" id="Intro">
+    <motion.div className="Intro" id="Intro"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
       {/* left name side */}
       <div className="i-left">
-        <div className="i-name">
+        <motion.div className="i-name"
+          variants={fadeIn("right", "tween", 0.2, 1)}>
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>Ashvin Bambhaniya</span>
           <span>
-            Frontend Developer with high level of experience in web designing
+            Frontend Developer with good knowledge in web designing
             and development, producting the Quality work
           </span>
-        </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
-        </Link>
+        </motion.div>
+        <motion.div
+          variants={fadeIn("right", "tween", 0.2, 1)}
+        >
+          <Link to="contact" smooth={true} spy={true}>
+            <button className="button i-button">Hire me</button>
+          </Link>
+        </motion.div>
         {/* social icons */}
-        <div className="i-icons">
+        <motion.div className="i-icons"
+          variants={slideIn("up", "tween", 0.5, 1.3)}>
           <a target='_blank' rel="noreferrer" href="https://github.com/AshvinBambhaniya"><img src={Github} alt="" /></a>
           <img src={LinkedIn} alt="" />
           <a target='_blank' rel="noreferrer" href="https://www.instagram.com/ll__stylish_boy__ll/?utm_source=qr"><img src={Instagram} alt="" /></a>
 
-        </div>
+        </motion.div>
       </div>
       {/* right image side */}
-      <div className="i-right">
+      <div className="i-right" >
         <img src={Vector1} alt="" />
         <img src={Vector2} alt="" />
         <img src={boy} alt="" />
@@ -92,7 +105,7 @@ const Intro = () => {
           }}
         ></div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

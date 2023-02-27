@@ -11,6 +11,7 @@ yarn.lock
 
 # production
 /build
+/ashvin-bambhaniya
 
 # misc
 .DS_Store
