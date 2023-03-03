@@ -5,36 +5,46 @@
   margin-bottom: 2rem;
   top: 0;
 }
+
 .n-left {
   flex: 1;
   align-items: center;
   justify-content: left;
   display: flex;
   gap: 2rem;
+  position: fixed;
+  top: 35px;
+  z-index: 2;
 }
 
 .n-name {
   font-size: 1.3rem;
   font-weight: bold;
 }
+
 .n-right {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   font-weight: 400;
+  position: fixed;
+  right: 70px;
+  top: 18px;
+  z-index: 3;
 }
 
 .n-list {
   flex: 10;
 }
-.n-list > ul {
+
+.n-list>ul {
   display: flex;
   gap: 2rem;
   margin-right: 4rem;
 }
 
-.n-list > ul :hover {
+.n-list>ul :hover {
   color: var(--orange);
   cursor: pointer;
 }
@@ -46,5 +56,13 @@
 @media screen and (max-width: 480px) {
   .n-list {
     display: none;
+  }
+
+  .n-left{
+    position: unset;
+  }
+
+  .n-right{
+    position: unset;
   }
 }
