@@ -1,0 +1,65 @@
+/* Nodejs */
+.ds {
+    background: #e91e63;
+    animation: ds 2s linear forwards;
+}
+
+.ds span {
+    border: 1px solid #e91e63;
+}
+
+@keyframes ds {
+    100% {
+        width: 70%;
+    }
+}
+
+/* OOPs */
+.oops {
+    background: #ffeb3b;
+    animation: oops 2s linear forwards;
+}
+
+.oops span {
+    background: #ffeb3b;
+    border: 1px solid #ffeb3b;
+}
+
+@keyframes oops {
+    100% {
+        width: 65%;
+    }
+}
+
+
+/* SQL */
+.sql {
+    background: #9c27b0;
+    animation: sql 2s linear forwards;
+}
+
+.sql span {
+    border: 1px solid #9c27b0;
+}
+
+@keyframes sql {
+    100% {
+        width: 30%;
+    }
+}
+
+/* Git */
+.git {
+    background: #00bcd4;
+    animation: git 2s linear forwards;
+}
+
+.git span {
+    border: 1px solid #00bcd4;
+}
+
+@keyframes git {
+    100% {
+        width: 55%;
+    }
+}

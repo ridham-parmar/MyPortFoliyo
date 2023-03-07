@@ -1,0 +1,49 @@
+/* Nodejs */
+.node {
+    background: #e91e63;
+    animation: node 2s linear forwards;
+}
+
+.node span {
+    border: 1px solid #e91e63;
+}
+
+@keyframes node {
+    100% {
+        width: 25%;
+    }
+}
+
+
+/* Express */
+.express {
+    background: #9c27b0;
+    animation: express 2s linear forwards;
+}
+
+.express span {
+    border: 1px solid #9c27b0;
+}
+
+@keyframes express {
+    100% {
+        width: 36%;
+    }
+}
+
+
+/* Mongo */
+.mongo {
+    background: #00bcd4;
+    animation: node 2s linear forwards;
+}
+
+.mongo span {
+    border: 1px solid #00bcd4;
+}
+
+@keyframes mongo {
+    100% {
+        width: 25%;
+    }
+}

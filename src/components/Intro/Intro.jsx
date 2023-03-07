@@ -13,7 +13,7 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { fadeIn, slideIn, staggerContainer, zoomIn } from "../../utils/motion"
+import { fadeIn, slideIn, staggerContainer } from "../../utils/motion"
 
 const Intro = () => {
   // Transition

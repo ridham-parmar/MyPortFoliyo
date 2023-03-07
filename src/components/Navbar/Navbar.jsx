@@ -3,7 +3,7 @@ import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { fadeIn, headerVariants, staggerContainer } from "../../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 
 
 const Navbar = () => {

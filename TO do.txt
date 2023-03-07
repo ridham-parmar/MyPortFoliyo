@@ -1,2 +1,0 @@
-navbar sticky
-adding animation

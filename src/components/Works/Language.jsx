@@ -31,13 +31,13 @@ const Works = () => {
           </span>
           <span>Programming Languages</span>
           <span>
-            In C and Python learn only basic and core Programming syntax and concept
-            <br />
-            Good Knowledge in Java such as learn oops concept and DataStructures in java.
+            My main and I love to use React js library for FrontEnd Devlopment
             <br />
             JavaScript is my main and favorite language for Web Devlopment.
             <br />
-            I use React js for FrontEnd Devlopment
+            Good Knowledge in Java such as learn oops concept and DataStructures in java.
+            <br />
+            In C and Python learn only basic and core Programming syntax and concept
           </span>
           <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>

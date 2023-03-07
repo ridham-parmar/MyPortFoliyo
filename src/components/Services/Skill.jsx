@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Skiil.css";
+import "./popup.css";
 import Card from "../Card/Card";
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
@@ -7,7 +8,10 @@ import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import Resume from './resume.pdf';
-import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
+import FrontModal from "./FrontModal";
+import BackendModal from "./BackendModal";
+import OtherModal from "./OtherModal";
 
 const Services = () => {
   // context
@@ -20,6 +24,19 @@ const Services = () => {
     type: "spring",
   };
 
+  const [showFront, setShowFront] = useState(false);
+  const [showBackend, setShowBackend] = useState(false);
+  const [showOther, setShowOther] = useState(false);
+
+  const handleClose = () => {
+    setShowFront(false);
+    setShowBackend(false)
+    setShowOther(false)
+  }
+  const handleShowF = () => setShowFront(true);
+  const handleShowB = () => setShowBackend(true);
+  const handleShowO = () => setShowOther(true);
+
   return (
     <motion.div className="skiils" id="skiils"
       variants={staggerContainer}
@@ -27,6 +44,32 @@ const Services = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
     >
+
+      {/* The Modal */}
+      {showFront && <motion.div id="frontModal" className="modal"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <FrontModal close={handleClose} />
+      </motion.div>}
+      {showBackend && <motion.div id="frontModal" className="modal"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <BackendModal close={handleClose} />
+      </motion.div>}
+      {showOther && <motion.div id="frontModal" className="modal"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <OtherModal close={handleClose} />
+      </motion.div>}
       {/* left side */}
       <motion.div className="awesome"
         variants={fadeIn("right", "tween", 0.2, 1)}
@@ -55,7 +98,8 @@ const Services = () => {
           <Card
             emoji={HeartEmoji}
             heading={"Frontend"}
-            detail={"Html, Css, Bootstrap Framework, JavaScript, React Library"}
+            detail={"React Library, JavaScript, Html, Css, Bootstrap Framework"}
+            popup={handleShowF}
           />
         </motion.div>
         {/* second card */}
@@ -67,8 +111,8 @@ const Services = () => {
           <Card
             emoji={Glasses}
             heading={"Backend "}
-            // detail={"Html, Css, JavaScript, React, Nodejs, Express"}
-            detail={"JavaScript, Nodejs Framework, Express, Mongodb"}
+            detail={" Nodejs Framework, Express,JavaScript, Mongodb"}
+            popup={handleShowB}
           />
         </motion.div>
         {/* 3rd */}
@@ -80,9 +124,9 @@ const Services = () => {
           <Card
             emoji={Humble}
             heading={"Other"}
-            // detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
-            detail={"GitHub command, Data Structure, SQL CRUD Query, OOPs Concept"}
+            detail={"Data Structure, OOPs Concept, SQL CRUD Query, GitHub command"}
             color="rgba(252, 166, 31, 0.45)"
+            popup={handleShowO}
           />
         </motion.div>
         <div

@@ -1,0 +1,84 @@
+/* React */
+.react {
+    background: #e91e63;
+    animation: react 2s linear forwards;
+}
+
+.react span {
+    border: 1px solid #e91e63;
+}
+
+@keyframes react {
+    100% {
+        width: 70%;
+    }
+}
+
+
+/* JS */
+.js {
+    background: #ffeb3b;
+    animation: js 2s linear forwards;
+}
+
+.js span {
+    background: #ffeb3b;
+    border: 1px solid #ffeb3b;
+}
+
+@keyframes js {
+    100% {
+        width: 75%;
+    }
+}
+
+
+/* Bootstrap */
+.bootstrap {
+    background: #9c27b0;
+    animation: bootstrap 2s linear forwards;
+}
+
+.bootstrap span {
+    border: 1px solid #9c27b0;
+}
+
+@keyframes bootstrap {
+    100% {
+        width: 70%;
+    }
+}
+
+
+/* Html */
+.html {
+    background: #00bcd4;
+    animation: html 2s linear forwards;
+}
+
+.html span {
+    border: 1px solid #00bcd4;
+}
+
+@keyframes html {
+    100% {
+        width: 65%;
+    }
+}
+
+
+/* Css */
+.css {
+    background: #cddc39;
+    animation: css 2s linear forwards;
+}
+
+.css span {
+    border: 1px solid #cddc39;
+}
+
+@keyframes css {
+    100% {
+        width: 65%;
+    }
+}

@@ -41,6 +41,10 @@
   border-radius: 9px;
 }
 
+.portfolio img:hover {
+  box-shadow: 0px 0px 30px 15px rgba(245, 193, 20, 0.552);
+}
+
 @media screen and (max-width: 480px) {
   .portfolio img {
     width: 16rem;

@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import "./Portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css";
-import Sidebar from "../../img/text_editer.png";
+import NoteBook from "../../img/NoteBook.png";
+import TextEditer from "../../img/text_editer.png";
 import Ecommerce from "../../img/Flipkart.png";
-import HOC from "../../img/Food.png";
-import MusicApp from "../../img/Spotify.png";
+import Food from "../../img/Food.png";
 import { themeContext } from "../../Context";
 import { staggerContainer, zoomIn } from "../../utils/motion";
 import { motion } from "framer-motion";
@@ -34,16 +34,16 @@ const Portfolio = () => {
         className="portfolio-slider"
       >
         <SwiperSlide>
-          <motion.img variants={zoomIn(0.1, 1)} src={MusicApp} alt="" />
+          <a target='_blank' rel="noreferrer" href="https://stylish-notebook.netlify.app"><motion.img variants={zoomIn(0.1, 1)} src={NoteBook} alt="" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <motion.img variants={zoomIn(0.1, 1)} src={Sidebar} alt="" />
+          <a target='_blank' rel="noreferrer" href="https://stylish-text-editer.netlify.app"><motion.img variants={zoomIn(0.1, 1)} src={TextEditer} alt="" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <motion.img variants={zoomIn(0.1, 1)} src={Ecommerce} alt="" />
+          <a target='_blank' rel="noreferrer" href="https://github.com/AshvinBambhaniya/MyOnlineShoppingWebsite"><motion.img variants={zoomIn(0.1, 1)} src={Ecommerce} alt="" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <motion.img variants={zoomIn(0.1, 1)} src={HOC} alt="" />
+          <a target='_blank' rel="noreferrer" href="https://github.com/AshvinBambhaniya/StylishFood"><motion.img variants={zoomIn(0.1, 1)} src={Food} alt="" /></a>
         </SwiperSlide>
       </Swiper>
     </motion.div>
