@@ -54,4 +54,8 @@
   .portfolio-slider {
     text-align: center;
   }
+  
+  .portfolio span:nth-of-type(2) {
+    font-size: 1.9rem;
+  }
 }

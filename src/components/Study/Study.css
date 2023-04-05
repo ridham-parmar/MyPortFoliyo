@@ -85,14 +85,23 @@
     .circle {
         transform: scale(0.75);
     }
+
+    .exp {
+        line-height: 25px;
+    }
+
+    .primaryText {
+        font-size: 2rem;
+    }
+
 }
 
 .s-blur-study-2 {
-  left: 40rem;
-  top: 2rem;
+    left: 40rem;
+    top: 2rem;
 }
 
 .s-blur-study-1 {
-  top: 12rem;
-  left: 6rem;
+    top: 12rem;
+    left: 6rem;
 }

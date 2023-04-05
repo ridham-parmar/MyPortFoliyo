@@ -23,7 +23,7 @@ const OtherModal = (props) => {
                     </div>
                     <h2>SQL</h2>
                     <div className="progress-bar">
-                        <div className="sql"><span>30%</span></div>
+                        <div className="sql"><span>65%</span></div>
                     </div>
                     <h2>Git Command</h2>
                     <div className="progress-bar">

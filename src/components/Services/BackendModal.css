@@ -31,6 +31,23 @@
     }
 }
 
+/* JS */
+.js {
+    background: #ffeb3b;
+    animation: js 2s linear forwards;
+}
+
+.js span {
+    background: #ffeb3b;
+    border: 1px solid #ffeb3b;
+}
+
+@keyframes js {
+    100% {
+        width: 75%;
+    }
+}
+
 
 /* Mongo */
 .mongo {

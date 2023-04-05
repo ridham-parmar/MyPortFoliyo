@@ -17,10 +17,6 @@ const FrontModal = (props) => {
                     <div className="progress-bar">
                         <div className="react"><span>70%</span></div>
                     </div>
-                    <h2>JavaScript</h2>
-                    <div className="progress-bar">
-                        <div className="js"><span>75%</span></div>
-                    </div>
                     <h2>Bootstrap</h2>
                     <div className="progress-bar">
                         <div className="bootstrap"><span>70%</span></div>

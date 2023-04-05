@@ -98,17 +98,14 @@
 }
 
 
-/* Frontend */
-
-
-
-/* Backend */
-
-
-/* Other */
-
 @media screen and (max-width: 480px) {
     .pop-skill {
-        transform: scale(0.5);
+        transform: scale(0.4);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .pop-skill {
+        transform: scale(0.3);
     }
 }

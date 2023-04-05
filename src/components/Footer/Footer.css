@@ -21,6 +21,11 @@
   gap: 2rem;
 }
 
+.footer-social-icon:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 @media screen and (max-width: 480px){
   .f-content{
     transform: scale(.5);

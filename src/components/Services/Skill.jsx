@@ -111,7 +111,7 @@ const Services = () => {
           <Card
             emoji={Glasses}
             heading={"Backend "}
-            detail={" Nodejs Framework, Express,JavaScript, Mongodb"}
+            detail={" Nodejs Framework, Express js, JavaScript, Mongodb Connection"}
             popup={handleShowB}
           />
         </motion.div>

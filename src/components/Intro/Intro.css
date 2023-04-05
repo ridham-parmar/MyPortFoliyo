@@ -55,6 +55,7 @@
 
 .i-icons>*:hover {
   cursor: pointer;
+  transform: scale(0.54);
 }
 
 /* right side styling */
@@ -146,4 +147,13 @@
     text-align: center;
     align-items: center;
   }
+
+  .i-name> :nth-child(1) {
+    font-size: 2rem;
+  }
+  
+  .i-name> :nth-child(2) {
+    font-size: 1.65rem;
+  }
+
 }

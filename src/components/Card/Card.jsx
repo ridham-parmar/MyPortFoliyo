@@ -12,7 +12,7 @@ const Card = ({ emoji, heading, detail, color, popup }) => {
       <img src={emoji} alt="" />
       <span>{heading}</span>
       <span>{detail}</span>
-      <button onClick={popup} className="c-button">LEARN MORE</button>
+      <button onClick={popup} className="c-button">KNOW MORE</button>
     </div>
   );
 };

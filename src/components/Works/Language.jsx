@@ -26,10 +26,10 @@ const Works = () => {
         variants={fadeIn("right", "tween", 0.2, 1)}>
         <div className="awesome">
           {/* dark Mode */}
-          <span style={{ color: darkMode ? "white" : "" }}>
+          <span id="lan-header-1" style={{ color: darkMode ? "white" : "" }}>
             Code in All these
           </span>
-          <span>Programming Languages</span>
+          <span>Languages</span>
           <span>
             My main and I love to use React js library for FrontEnd Devlopment
             <br />
