@@ -9,7 +9,7 @@ import crown from "../../img/crown.png";
 import FloatinDiv from "../FloatingDiv/FloatingDiv";
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
-import Instagram from "../../img/instagram.png";
+import LeetCode from "../../img/Leetcode4.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
@@ -25,7 +25,7 @@ const Intro = () => {
   const darkMode = theme.state.darkMode;
 
   const { text } = useTypewriter({
-    words: ['Ashvin Bambhaniya', 'Web Developer','Computer Engineer'],
+    words: ['Ashvin Bambhaniya', 'Web Developer', 'Computer Engineer'],
     loop: {},
     typeSpeed: 50,
     deleteSpeed: 50
@@ -62,7 +62,7 @@ const Intro = () => {
           variants={slideIn("up", "tween", 0.5, 1.3)}>
           <a target='_blank' rel="noreferrer" href="https://github.com/AshvinBambhaniya"><img src={Github} alt="" /></a>
           <a target='_blank' rel="noreferrer" href="https://www.linkedin.com/in/ashvin-bambhaniya-0873aa270/"><img src={LinkedIn} alt="" /></a>
-          <a target='_blank' rel="noreferrer" href="https://www.instagram.com/ll__stylish_boy__ll/?utm_source=qr"><img src={Instagram} alt="" /></a>
+          <a target='_blank' rel="noreferrer" href="https://leetcode.com/AshvinBambhaniya/"><img height={86} width={87} src={LeetCode} alt="" /></a>
 
         </motion.div>
       </div>

@@ -7,7 +7,6 @@ import JS from "../../img/JS.png";
 import Python from "../../img/Python.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import { Link } from 'react-scroll'
 import { fadeIn, staggerContainer } from "../../utils/motion";
 const Works = () => {
   // context
@@ -39,9 +38,7 @@ const Works = () => {
             <br />
             In C and Python learn only basic and core Programming syntax and concept
           </span>
-          <Link to="contact" smooth={true} spy={true}>
-            <button className="button s-button">Hire Me</button>
-          </Link>
+          <a target='_blank' rel="noreferrer" href="https://drive.google.com/drive/folders/13gp9XIOzQwNcj4f0v85yxhPqt-EIfqQg?usp=share_link"><button className="button s-button">Certificates</button></a>
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
@@ -58,21 +55,31 @@ const Works = () => {
           transition={{ duration: 5, type: "spring" }}
           className="w-mainCircle"
         >
-          <div className="w-secCircle">
-            <img src={C} alt="" />
-          </div>
-          <div className="w-secCircle">
-            <img src={Java} alt="" />
-          </div>
-          <div className="w-secCircle">
-            <img src={React_logo} alt="" />
-          </div>
-          <div className="w-secCircle">
-            <img src={JS} alt="" />
-          </div>
-          <div className="w-secCircle">
-            <img src={Python} alt="" />
-          </div>
+          <a target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/11JY4TjeyUV5akVkZoQvEkKWPmwfLGXsJ/view?usp=share_link">
+            <div className="w-secCircle">
+              <img src={C} alt="" />
+            </div>
+          </a>
+          <a target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1GnZ554xpTja-pneO_2C8BumboG0cYcj_/view?usp=share_link">
+            <div className="w-secCircle">
+              <img src={Java} alt="" />
+            </div>
+          </a>
+          <a target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1GbWC1lLLIoVWnWBnXNDitYit6KOYY5KL/view?usp=share_link">
+            <div className="w-secCircle">
+              <img src={React_logo} alt="" />
+            </div>
+          </a>
+          <a target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1nkHrB0APbt0G7bWcCp4y7XkfY-hLsGDW/view?usp=share_link">
+            <div className="w-secCircle">
+              <img src={JS} alt="" />
+            </div>
+          </a>
+          <a target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1XY2AU7Nv9gSwi5mpjbOdM4yYNkQGj0ew/view?usp=share_link">
+            <div className="w-secCircle">
+              <img src={Python} alt="" />
+            </div>
+          </a>
         </motion.div>
         {/* background Circles */}
         <div className="w-backCircle blueCircle"></div>

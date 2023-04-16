@@ -43,7 +43,7 @@ const Study = () => {
 
 
                     <motion.div variants={zoomIn(1, 1)} className="progressbar">
-                        <motion.div variants={fadeIn("up", "tween", 2, 1.5)} className="line"></motion.div>
+                        <motion.div variants={fadeIn("up", "tween", 2, 1.5)} style={{ backgroundImage: darkMode ? "linear-gradient(white 33%, rgba(255, 255, 255, 0) 0%)" : "" }} className="line"></motion.div>
                         <div><div className="circle" style={{ background: "#286F6C" }}></div></div>
                         <div><div className="circle" style={{ background: "#fca61f" }}></div></div>
                         <div><div className="circle" style={{ background: "#F2704E" }}></div></div>

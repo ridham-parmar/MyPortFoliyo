@@ -5,7 +5,7 @@ import { themeContext } from "../../Context";
 import { fadeIn, footerVariants, staggerContainer } from "../../utils/motion";
 import { motion } from "framer-motion";
 
-const Contact = () => {
+const Contact = (props) => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   const form = useRef();
@@ -22,6 +22,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          props.showAlert("Request Submit", "success")
           console.log(result.text);
           setDone(true);
           let form = document.getElementById("my-form")
@@ -29,7 +30,7 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-          alert("Some error occurred. Please check console")
+          props.showAlert("Some error occurred. Please check console", "danger")
         }
       );
   };

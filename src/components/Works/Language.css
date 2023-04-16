@@ -100,6 +100,11 @@
   background: white;
 }
 
+.w-secCircle:hover {
+  background: #cccdd4;
+  cursor: pointer;
+}
+
 .w-mainCircle> :nth-child(5) img {
   transform: scale(0.08);
 }
@@ -111,7 +116,7 @@
   transform: scale(0.45);
 }
 .w-mainCircle> :nth-child(2) img {
-  transform: scale(0.13);
+  transform: scale(0.045);
 }
 .w-mainCircle> :nth-child(1) img {
   transform: scale(0.06);

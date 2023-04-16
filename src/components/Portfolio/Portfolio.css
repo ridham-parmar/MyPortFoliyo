@@ -54,8 +54,31 @@
   .portfolio-slider {
     text-align: center;
   }
-  
+
   .portfolio span:nth-of-type(2) {
     font-size: 1.9rem;
   }
+
+  select {
+    font-size: small;
+  }
+}
+
+select {
+  color: var(--orange);
+  font-size: 1.9rem;
+  font-weight: bold;
+  border: none;
+  text-decoration: underline;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
 }
