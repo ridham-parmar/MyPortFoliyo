@@ -7,7 +7,6 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from './resume.pdf';
 import { fadeIn, staggerContainer } from "../../utils/motion";
 import FrontModal from "./FrontModal";
 import BackendModal from "./BackendModal";
@@ -82,8 +81,8 @@ const Services = () => {
           <br />
           Also quite good in HTML, CSS and BootStrap.
         </span>
-        <a href={Resume} download>
-          <button className="button s-button">Download CV</button>
+        <a target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1gRklANMFo8xmTvsPP8khrg7Er-qOVQ09/view?usp=share_link">
+          <button className="button s-button">My Resume</button>
         </a>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </motion.div>

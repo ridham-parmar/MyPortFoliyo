@@ -13,6 +13,8 @@ import { themeContext } from "./Context";
 import Study from "./components/Study/Study";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from "react-scroll-to-top";
+import { ReactComponent as MySVG } from "./fonts/scroll.svg"
 
 function App() {
   const theme = useContext(themeContext);
@@ -57,6 +59,10 @@ function App() {
       {/* <Testimonial /> */}
       <Contact showAlert={showAlert} />
       <Footer />
+      <ScrollToTop
+        smooth
+        component={<MySVG />}
+      />
       <ToastContainer />
     </div>
   );

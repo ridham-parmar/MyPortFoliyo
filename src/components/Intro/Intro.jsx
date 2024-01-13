@@ -46,8 +46,8 @@ const Intro = () => {
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>{text}<Cursor /></span>
           <span>
-            Web Developer with good knowledge in web designing
-            and development, producting the Quality work
+            Web Developer with good knowledge in React
+            and Express, producting the Quality work
           </span>
         </motion.div>
         <motion.div
