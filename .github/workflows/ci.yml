@@ -34,5 +34,5 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            my-portfolio:${{ github.sha }}
-            my-portfolio:latest
+            ${{ secrets.DOCKER_USERNAME }}/my-portfolio:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/my-portfolio:latest
